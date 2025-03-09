@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Kaushan Script'>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Amaranth&family=Comfortaa:wght@700&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- used to avoid fake favicon requests -->
+    <!-- <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futras - Fitness & Nutrition</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- 
+    - google font link
+  -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="contain" id="myContain">
+            <a href="#" class="headline">
+                <span id="plant">Plant</span>
+                <span id="fit">Fit</span>
+                <span id="dot">.</span>
+            </a>
+    
+            <div class="navbar" id="myNavbar">
+    
+                <div></div>
+                <!-- aria-label="close menu"  -->
+                <button class="cancel" data-nav-toggler="">
+                    <ion-icon aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                </button>
+    
+                <a href="#home" id="home-nav" data-nav-link="">Home</a>
+    
+                <a href="#about" data-nav-link="">About Us</a>
+    
+                <a href="#course" data-nav-link="">All Course</a>
+    
+                <a href="#blog" data-nav-link="">Blog</a>
+    
+                <a href="#" data-nav-link="">Contact</a>
+    
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <ion-icon name="menu-outline"></ion-icon>
+            </a>
+    
+        </div>
+    
+        <div class="overlay" id="myOverlay" data-nav-toggler="" data-overlay=""></div>
+    
+        <script>
+            'use strict';
+            const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+            const navLinks = document.querySelectorAll("[data-nav-link]");
+            const overlay = document.querySelector("#myOverlay");
+            const navbar = document.querySelector("#myNavbar");
+    
+            function myFunction() {
+                // showOverlay();
+                
+                var x = document.getElementById("myNavbar");
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar";
+                }
+    
+                var y = document.getElementById("myContain");
+                if (y.className === "contain") {
+                    y.className += " clicked";
+                } else {
+                    y.className = "contain";
+                }
+            }
+            // function showOverlay() {
+            //     var x = document.getElementById("myOverlay");
+            //     if (x.className === "overlay") {
+            //         x.className += " active";
+            //     } else {
+            //         x.className = "overlay";
+            //     }
+            // }
+    
+            // /**
+            //  * add event on element
+            //  */
+    
+            // const addEventOnElem = function (elem, type, callback) {
+            //     if (elem.length > 1) {
+            //         for (let i = 0; i < elem.length; i++) {
+            //             elem[i].addEventListener(type, callback);
+            //         }
+            //     } else {
+            //         elem.addEventListener(type, callback);
+            //     }
+            // }
+    
+            // /**
+            // * navbar toggle
+            // */
+    
+            // alert(navbar)
+            // const toggleNavbar = function () {
+            //     navbar.classList.toggle("active");
+            //     overlay.classList.toggle("active");
+            // }
+    
+            // addEventOnElem(navTogglers, "click", toggleNavbar);
+    
+            // const closeNavbar = function () {
+            //     navbar.classList.remove("active");
+            //     overlay.classList.remove("active");
+            // }
+    
+            // addEventOnElem(navLinks, "click", closeNavbar);
+        </script>
+    </header>
+
+    <!-- https://img.freepik.com/free-photo/fitness-body-builder-challenge_53876-125080.jpg?t=st=1677717213~exp=1677717813~hmac=ff88599b31f046df1a653b3721831bbe2f042841e5e4d10d97b5b9722c2d8072 -->
+    <div class="fadein">
+        <img id="f1" src="img2.jpg">
+        <img id="f2" src="img1.jpg">
+        <img id="f3" src="img4.jpg">
+        <img id="f4" src="img3.jpg">
+    </div>
+</body>
+
+
+<footer></footer>

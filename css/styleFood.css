@@ -1,0 +1,148 @@
+/*///////////////////////*/
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif !important;
+    margin: 0;
+}
+
+.navbar2 {
+    overflow: hidden;
+    background-color: #478778;
+    padding-bottom: 50px;
+}
+
+.navbar2 a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+.subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar2 a:hover,
+.subnav:hover .subnavbtn {
+    background-color: #FFC300;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #FFC300;
+    width: 100%;
+    z-index: 1;
+}
+
+.subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.subnav-content a:hover {
+    color: black;
+    background-color: hsl(38, 100%, 50%);
+    text-decoration: none;
+}
+
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+/*Food cards*/
+.group {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    width: 160px;
+}
+
+input[type="checkbox"] {
+    margin-top: 0.5em;
+}
+
+.col-sm{
+    /* border: solid; */
+    /* border-radius: 25px; */
+    padding: 0;
+    width: 60%;
+}
+
+img {
+    border-radius: 50%;
+    
+}
+
+img:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.buttonS {
+    margin-top: 2em;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonS:hover {
+    background-color: #3e8e41 !important;
+}
+
+.buttonA {
+    margin-top: 2em;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    background-color: yellow;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonA:hover {
+    background-color: orange !important;
+}
+
+#total-calories {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.heading2{
+    padding-top: 20px;
+    font-family: "Grotley Font Regular";
+    text-align: center;
+}

@@ -1,0 +1,299 @@
+header {
+    /* border-color: black;
+    border-style: solid; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    right: 0;
+    top: 0;
+    box-shadow: 0px 5px 20px #888888;
+}
+
+header.active {
+    box-shadow: 0px 5px 20px #888888;
+}
+
+.contain {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contain.clicked {
+    height: 395px;
+}
+
+.headline {
+    /* font-family: 'Kaushan Script', cursive !important; */
+    /* font-family: 'Yananeska',cursive !important; */
+    /* font-family: 'Untlang'; */
+    /* font-family: 'Raleway SemiBold', cursive !important; */
+    font-family: 'Amaranth', sans-serif;
+    font-weight: 400;
+    font-size: 55px;
+
+    width: 190px;
+    color: #767d87;
+    margin-top: 11px;
+    margin-left: 60px;
+    text-decoration: none !important;
+    white-space: nowrap;
+    display: block;
+}
+
+#plant {
+    font-size: 55px;
+    color: #767d87;
+}
+
+#fit {
+    font-size: 55px;
+    color: #afeace;
+    margin-left: -15px;
+}
+
+#dot {
+    font-size: 55px;
+    font-family: 'Comfortaa', cursive !important;
+    margin-left: -15px;
+    color: hsl(38, 100%, 50%);
+}
+
+.navbar {
+    resize: none !important;
+    overflow: hidden;
+    width: auto;
+    top: 16px;
+    padding: 0px 14px 0px 14px !important;
+}
+
+.navbar button {
+    float: left;
+    display: block;
+    color: hsl(32, 24%, 14%);
+    background-color: white;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-decoration: none !important;
+    border: none;
+}
+
+.navbar a,
+.icon {
+    float: left;
+    display: block;
+    color: hsl(32, 24%, 14%);
+    background-color: white;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-decoration: none !important;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar a:hover,
+.icon:hover {
+    color: hsl(38, 100%, 50%);
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.icon {
+    top: 49px !important;
+    font-size: 34px;
+    font-weight: lighter;
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-1);
+    z-index: 1;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links.
+Show menu that contains nav items and should be able to open and close collapsed navbar through (.icon) */
+@media screen and (max-width: 808px) {
+    .icon {
+        float: right;
+        display: block !important;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    .navbar.responsive a {
+        display: none;
+    }
+
+    .contain {
+        height: 96px;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 808px) {
+    .headline {
+        display: block !important;
+    }
+
+    .navbar.responsive {
+        visibility: visible;
+        transition: 0.5s var(--cubic-out);
+
+        width: 100%;
+        position: absolute;
+        display: block;
+        margin-top: 98px !important;
+        padding-right: 0% !important;
+        padding-left: 0% !important;
+        box-shadow: 0px 0px 20px 0px #888888;
+    }
+
+    .navbar.responsive.active {
+        visibility: visible;
+    }
+
+    .icon {
+        position: absolute !important;
+        right: 36px !important;
+        display: block !important;
+    }
+
+    .navbar.responsive a {
+        padding-left: 62px !important;
+        padding: 17.5px 0px;
+        float: none;
+        display: block;
+        text-align: left;
+        /* background-color: #CCFFBB; */
+        border-block-start: 1px solid var(--blue-green-color-wheel_10);
+    }
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+
+.fadein {
+    position: fixed;
+    margin-bottom:20px;
+    left: 29px;
+    right: 29px;
+    margin-top: 20px;
+    border-radius: 5px;
+    min-height: 70%;
+    width: auto;
+    max-width: 1260px;
+    box-shadow: 0px 5px 20px #888888;
+}
+
+.fadein img {
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 20s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+
+#f1, #f2, #f3, #f4 {
+    width: 100%;
+    max-width: 750px;
+    height: 93%;
+    object-fit: cover;
+}
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    53% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    53% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#f2 {
+    -webkit-animation-delay: -5s;
+}
+
+#f3 {
+    -webkit-animation-delay: -10s;
+}
+
+#f4 {
+    -webkit-animation-delay: -15s;
+}
+
+@font-face {
+    font-family: 'Yananeska';
+    src: URL('YananeskaPersonalUse-ado9.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Untlang';
+    src: URL('Untlang-1G1rB.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Bold';
+    src: URL('Raleway-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway SemiBold';
+    src: URL('Raleway-SemiBold.ttf') format('truetype');
+}
